@@ -27,6 +27,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
+//import org.apache.log4j.Level;
 
 
 /**
@@ -57,6 +58,7 @@ public class Base {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.get(url);
         driver.manage().window().maximize();
+
     }
 
     public WebDriver getLocalDriver(String browserName){
@@ -120,6 +122,16 @@ public class Base {
         List<WebElement> list = new ArrayList<WebElement>();
         list = driver.findElements(By.id(locator));
         return list;
+    }
+    public List<String> getTextFromWebElements(String locator){
+        List<WebElement> element = new ArrayList<WebElement>();
+        List<String> text = new ArrayList<String>();
+        element = driver.findElements(By.cssSelector(locator));
+        for(WebElement web:element){
+            text.add(web.getText());
+        }
+
+        return text;
     }
     public List<WebElement> getListOfWebElementsByCss(String locator) {
         List<WebElement> list = new ArrayList<WebElement>();
@@ -241,6 +253,12 @@ public class Base {
         /* path example to upload a file/image
            path= "C:\\Users\\rrt\\Pictures\\ds1.png";
          */
+    }
+    public void clearInput(String locator){
+        driver.findElement(By.cssSelector(locator)).clear();
+    }
+    public void keysInput(String locator){
+        driver.findElement(By.cssSelector(locator)).sendKeys(Keys.ENTER);
     }
 
 

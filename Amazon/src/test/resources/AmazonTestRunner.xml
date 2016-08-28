@@ -13,7 +13,8 @@
 
     <test name = "Amazon Search">
         <classes>
-            <class name="home.page.Search"/>
+            <!--<class name="home.page.Search"/>-->
+             <class name="SearchItems.Items"/>
         </classes>
     </test>
 

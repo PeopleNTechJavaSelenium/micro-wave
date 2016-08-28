@@ -1,5 +1,13 @@
 package utility;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Properties;
+
 /**
  * Created by rrt on 8/21/2016.
  */
@@ -19,7 +27,7 @@ public class ConnectMySqlDB {
     PreparedStatement ps = null;
     ResultSet resultSet = null;
 
-    public static Properties loadProperties() throws IOException{
+    public static Properties loadProperties() throws IOException {
         Properties prop = new Properties();
         InputStream ism = new FileInputStream("src\\MySql.properties");
         prop.load(ism);

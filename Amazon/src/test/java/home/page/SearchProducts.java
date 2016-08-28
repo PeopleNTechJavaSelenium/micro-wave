@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 /**
  * Created by rrt on 8/21/2016.
  */
-public class Search extends Base {
+public class SearchProducts extends Base {
 
     @Test
     public void searchItems()throws InterruptedException{
