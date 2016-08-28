@@ -83,7 +83,9 @@
       </profile>
       <profile>
           <id>default</id>
-          <activationByDefault>true</activationByDefault>
+          <!--<activation>-->
+            <!--<activationByDefault>true</activationByDefault>-->
+          <!--</activation>-->
           <modules>
               <module>Generic</module>
               <module>Amazon</module>
