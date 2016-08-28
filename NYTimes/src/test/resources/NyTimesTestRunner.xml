@@ -9,7 +9,7 @@
     <parameter name="os" value="windows"/>
     <parameter name="browser" value="firefox"/>
     <parameter name="browserVersion" value="48"/>
-    <parameter name="url" value="http://www.nytimes.com"/>
+    <parameter name="url" value="http://query.nytimes.com/search/sitesearch/"/>
 
     <test name = "Ny Times Search">
         <classes>

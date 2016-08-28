@@ -64,6 +64,7 @@ public class Base {
             System.setProperty("webdriver.chrome.driver","C:\\Users\\rrt\\workspace-July2016\\WebApp-Automation\\Generic\\selenium-browser-driver\\chromedriver.exe");
             driver = new ChromeDriver();
         }else if(browserName.equalsIgnoreCase("firefox")){
+            System.setProperty("webdriver.gecko.driver","C:\\Users\\rrt\\workspace-July2016\\WebApp-Automation\\Generic\\selenium-browser-driver\\geckodriver.exe");
             driver = new FirefoxDriver();
         } else if(browserName.equalsIgnoreCase("ie")) {
             System.setProperty("webdriver.ie.driver", "Generic/browser-driver/IEDriverServer.exe");
@@ -124,6 +125,10 @@ public class Base {
         List<WebElement> list = new ArrayList<WebElement>();
         list = driver.findElements(By.cssSelector(locator));
         return list;
+    }
+    public String  getCurrentPageUrl(){
+        String url = driver.getCurrentUrl();
+        return url;
     }
     public void navigateBack(){
         driver.navigate().back();
