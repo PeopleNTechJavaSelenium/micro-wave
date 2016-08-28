@@ -18,12 +18,12 @@ import java.io.IOException;
 
 public class DataReader {
     HSSFWorkbook wb = null;
-    HSSFSheet sheet = null;
-    Cell cell = null;
-    FileOutputStream fio = null;
-    int numberOfRows, numberOfCol, rowNum;
-    public String[][] fileReader1(String path)throws IOException{
-        String [] [] data = {};
+        HSSFSheet sheet = null;
+        Cell cell = null;
+        FileOutputStream fio = null;
+        int numberOfRows, numberOfCol, rowNum;
+        public String[][] fileReader1(String path)throws IOException{
+            String [] [] data = {};
         File file = new File(path);
         FileInputStream fis = new FileInputStream(file);
         wb = new HSSFWorkbook(fis);

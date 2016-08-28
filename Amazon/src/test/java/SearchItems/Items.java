@@ -23,9 +23,6 @@ public class Items extends Base {
          //Read search.data from excel file
         ItemsToBeSearched itemsToBeSearched = new ItemsToBeSearched();
         String [] value = itemsToBeSearched.getData();
-
-         List<String> list = new ArrayList<String>();
-
          for(String read:value) {
              search.searchFor(read);
              sleepFor(2);
@@ -46,9 +43,6 @@ public class Items extends Base {
             search.clearSearchInput();
         }
     }
-
-
-
 
      //One Data Driven Option to supply search.data from Data Provider
     @DataProvider(name = "items")

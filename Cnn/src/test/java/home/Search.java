@@ -1,6 +1,6 @@
 package home;
 
-import CommonApi.Base;
+import common.Base;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Level;
 import org.testng.annotations.DataProvider;
@@ -21,8 +21,8 @@ public class Search extends Base {
     @Test(dataProvider = "items")
     public void test1(String data){
         BasicConfigurator.configure();
-        logger.setLevel(Level.INFO);
-        logger.info("Cnn search test started");
+//        logger.setLevel(Level.INFO);
+//        logger.info("Cnn search test started");
         clickByCss("#search-button");
         typeByCss("#search-input-field", data);
     }
