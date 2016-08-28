@@ -61,16 +61,6 @@
 
   <profiles>
       <profile>
-      <id>default</id>
-      <activation>true</activation>
-       <modules>
-        <module>Generic</module>
-           <module>Amazon</module>
-           <module>Cnn</module>
-           <module>NYTimes</module>
-       </modules>
-      </profile>
-      <profile>
          <id>amazon-app</id>
              <modules>
                 <module>Generic</module>
@@ -88,6 +78,16 @@
           <id>NyTimes-app</id>
           <modules>
               <module>Generic</module>
+              <module>NYTimes</module>
+          </modules>
+      </profile>
+      <profile>
+          <id>default</id>
+          <activation>true</activation>
+          <modules>
+              <module>Generic</module>
+              <module>Amazon</module>
+              <module>Cnn</module>
               <module>NYTimes</module>
           </modules>
       </profile>
