@@ -1,6 +1,6 @@
 package search.data.reader;
 
-import CommonApi.Base;
+import common.Base;
 
 /**
  * Created by rrt on 1/9/2016.
