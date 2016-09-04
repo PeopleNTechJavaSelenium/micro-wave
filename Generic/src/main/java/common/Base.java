@@ -75,6 +75,20 @@ public class Base {
         return driver;
 
     }
+    public WebDriver getLocalGridDriver(String browserName) {
+        if (browserName.equalsIgnoreCase("chrome")) {
+            System.setProperty("webdriver.chrome.driver", "C:\\Users\\rrt\\workspace-July2016\\WebApp-Automation\\Generic\\selenium-browser-driver\\chromedriver.exe");
+            driver = new ChromeDriver();
+        } else if (browserName.equalsIgnoreCase("firefox")) {
+            System.setProperty("webdriver.gecko.driver", "C:\\Users\\rrt\\workspace-July2016\\WebApp-Automation\\Generic\\selenium-browser-driver\\geckodriver.exe");
+            driver = new FirefoxDriver();
+        } else if (browserName.equalsIgnoreCase("ie")) {
+            System.setProperty("webdriver.ie.driver", "Generic/browser-driver/IEDriverServer.exe");
+            driver = new InternetExplorerDriver();
+        }
+        return driver;
+    }
+
     public WebDriver getCloudDriver(String userName,String accessKey,String os, String browserName,
                                     String browserVersion)throws IOException {{
 
@@ -89,7 +103,7 @@ public class Base {
     }
     @AfterMethod
     public void cleanUp(){
-        driver.quit();
+        driver.close();
     }
 
     public void clickByCss(String locator) {
@@ -136,6 +150,11 @@ public class Base {
     public List<WebElement> getListOfWebElementsByCss(String locator) {
         List<WebElement> list = new ArrayList<WebElement>();
         list = driver.findElements(By.cssSelector(locator));
+        return list;
+    }
+    public List<WebElement> getListOfWebElementsByXpath(String locator) {
+        List<WebElement> list = new ArrayList<WebElement>();
+        list = driver.findElements(By.xpath(locator));
         return list;
     }
     public String  getCurrentPageUrl(){

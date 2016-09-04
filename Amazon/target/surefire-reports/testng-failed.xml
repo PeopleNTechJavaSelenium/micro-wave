@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Amazon E-Commerce]" parallel="tests">
+  <parameter name="useCloudEnv" value="false"/>
+  <parameter name="os" value="Win8"/>
+  <parameter name="accessKey" value="6f132866-de72-43fd-b49a-e6f81d26bfe3"/>
+  <parameter name="browserVersion" value="46.0"/>
+  <parameter name="browserName" value="chrome"/>
+  <parameter name="userName" value="rahmanww"/>
+  <parameter name="url" value="http://www.amazon.com"/>
+  <test name="Amazon Search">
+    <classes>
+      <class name="home.page.Search"/>
+    </classes>
+  </test> <!-- Amazon Search -->
+</suite> <!-- Failed suite [Amazon E-Commerce] -->

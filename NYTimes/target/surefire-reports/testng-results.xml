@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="NY Times" duration-ms="32730" started-at="2016-08-28T15:03:28Z" finished-at="2016-08-28T15:04:01Z">
+    <groups>
+    </groups>
+    <test name="Ny Times Search" duration-ms="32730" started-at="2016-08-28T15:03:28Z" finished-at="2016-08-28T15:04:01Z">
+      <class name="search.SearchContent">
+        <test-method status="PASS" signature="setUp(boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:search.SearchContent@3551a94]" name="setUp" is-config="true" duration-ms="6957" started-at="2016-08-28T11:03:28Z" finished-at="2016-08-28T11:03:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[rahmanww]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[48]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[http://query.nytimes.com/search/sitesearch/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="searchNews()[pri:0, instance:search.SearchContent@3551a94]" name="searchNews" duration-ms="24356" started-at="2016-08-28T11:03:35Z" finished-at="2016-08-28T11:03:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchNews -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:search.SearchContent@3551a94]" name="cleanUp" is-config="true" duration-ms="1402" started-at="2016-08-28T11:03:59Z" finished-at="2016-08-28T11:04:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+      </class> <!-- search.SearchContent -->
+    </test> <!-- Ny Times Search -->
+  </suite> <!-- NY Times -->
+</testng-results>
